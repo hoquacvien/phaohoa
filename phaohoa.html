@@ -1,0 +1,41 @@
+<head>
+    <meta charset="uft-8" />
+    <meta name="theme-color" content="#536878" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Chuc mung nam moi</title>
+    <link href="css/phaohoa.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <aside id="library">
+      <img src="images/nightsky.png" id="nightsky" />
+      <img src="images/big-glow.png" id="big-glow" />
+      <img src="images/small-glow.png" id="small-glow" />
+    </aside>
+    <main id="welcome-back" class="isPaused">
+      <h1 id="vien3">Nhấn liên tục vào màn hình</h1>
+      <h2 id="vien4" class="huygin">Chúc mừng năm mới 2020</h2>
+      <p>Vien 1997</p>
+    </main>
+  </body>
+  <script src="js/requestanimframe.js"></script>
+  <script src="js/phaohoa.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      console.log("Will service worker register?");
+      navigator.serviceWorker.register('service-worker.js').then(function(reg){
+        console.log("Yes it did.");
+      }).catch(function(err) {
+        console.log("No it didn't. This happened: ", err)
+      });
+    }
+  </script>
+  <script>
+     $(document).ready(function(){
+     $("canvas").click(function(){
+     $("#vien4").removeClass('vien').addClass("vien1");
+     });
+     });
+  </script>
+</html>
